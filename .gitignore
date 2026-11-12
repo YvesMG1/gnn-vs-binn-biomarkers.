@@ -1,0 +1,13 @@
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# per-patient graph pickles built by the notebooks
+graph_data/*
+!graph_data/.gitkeep
+
+# local environments and build output
+.venv/
+build/
+*.egg-info/

@@ -1,0 +1,35 @@
+[project]
+name = "gnn-vs-binn-biomarkers"
+version = "1.0.0"
+description = "GNNs vs a biologically informed MLP vs classical models for proteomics disease prediction and biomarker identification"
+readme = "README.md"
+requires-python = ">=3.8,<3.12"
+authors = [
+    { name = "Frederick Geiger" },
+    { name = "Yves Görgen" },
+    { name = "Hendrik Plett" },
+]
+# Versions are the ones the experiments ran with (Python 3.8, January 2024).
+dependencies = [
+    "torch==2.1.0",
+    "torch-geometric==2.4.0",
+    "binn==0.0.3",
+    "lightning==2.1.3",  # used by binn
+    "shap==0.44.0",  # used by binn
+    "setuptools<81",  # lightning 2.1 imports pkg_resources
+    "scikit-learn==1.3.0",
+    "networkx==3.1",
+    "numpy==1.24.4",
+    "pandas==2.0.3",
+    "matplotlib==3.7.2",
+    "seaborn==0.12.2",
+    "ipykernel",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["cust_functions"]
+py-modules = ["util_for_examples"]
